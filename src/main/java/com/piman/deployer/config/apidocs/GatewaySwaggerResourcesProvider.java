@@ -51,7 +51,7 @@ public class GatewaySwaggerResourcesProvider implements SwaggerResourcesProvider
             .defaultIfEmpty(Collections.emptyList())
             .subscribeOn(Schedulers.boundedElastic())
             .toFuture()
-            .orTimeout(10, TimeUnit.SECONDS)
+            // .orTimeout(10, TimeUnit.SECONDS)
             .join();
         microservices
             .stream()
